@@ -1,21 +1,25 @@
-// tady je místo pro náš program
+let soucet = document.querySelector("#vysledek")
 
-document.querySelector("#vysledek").innerHTML = secti(4, 5);
+function vysledek(a, b) {
+	soucet.innerHTML = secti(a, b);
+}
 
-/**
- * Sečte dvě čísla na vstupu a vrátí výsledek
- *
- * @param {int} a
- * @param {int} b
- */
 function secti(a, b) {
   let c = a + b;
   return c;
 }
 
-/**
- * Upozorní uživatele při spuštění.
- */
+
+
+let ctverec = document.querySelector(".ctverecek")
+
+function zmenaBarvy() {
+ctverec.style.backgroundColor="green"
+}
+
+
 function upozorni() {
   alert("Gratulace, právě jsi spustila tuto funkci!");
+  ctverec.innerHTML= "Gratulace, právě jsi spustila tuto funkci!"
+  ctverec.style.width= "500px"
 }
